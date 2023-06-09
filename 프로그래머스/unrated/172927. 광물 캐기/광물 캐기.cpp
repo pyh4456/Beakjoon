@@ -43,7 +43,7 @@ int fatigue(int pick, string minerals){
 
 int solution(vector<int> picks, vector<string> minerals) {
     int answer = 0, temp = minerals.size();
-    int cnt = 0, sum = 0, least = 125, size = (minerals.size() / 5) + 1;
+    int cnt = 0, size = (minerals.size() / 5) + 1;
     int *pickaxe;  //곡괭이가 사용되는 순서를 저장할 배열
     int current_pick;   //현재 검사중인 곡괭이
     priority_queue<pair<int,int>, vector<pair<int,int>>, cmp> pq;
