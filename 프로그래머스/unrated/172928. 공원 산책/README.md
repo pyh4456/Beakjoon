@@ -1,10 +1,10 @@
 # [unrated] 공원 산책 - 172928 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/172928?language=c) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/172928) 
 
 ### 성능 요약
 
-메모리: 4.46 MB, 시간: 0.03 ms
+메모리: 4.14 MB, 시간: 0.02 ms
 
 ### 구분
 

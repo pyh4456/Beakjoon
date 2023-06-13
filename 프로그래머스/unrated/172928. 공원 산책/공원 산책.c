@@ -81,8 +81,7 @@ int* solution(const char* park[], size_t park_len, const char* routes[], size_t 
                 }
                 break;
         }
-        printf("%d,%d\n",answer[0], answer[1]);
     }
-    
+
     return answer;
 }
