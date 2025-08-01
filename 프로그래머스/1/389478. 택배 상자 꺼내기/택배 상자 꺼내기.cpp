@@ -7,43 +7,41 @@ using namespace std;
 
 int solution(int n, int w, int num) {
     int answer = 0;
-    int x, y;
-    vector<int> cnt(w); 
+   
+    vector<vector<int>> v;
+    vector<int> temp(w, 0);
     
-    int i = 0;
-    while(i < n)
+    int height = n / w;
+    if(n % w > 0)
+        ++height;
+    
+    for(int i = 0; i < height; i++)
     {
+        v.push_back(temp);
+    }
+    
+    for(int i = 0; i < n; i++)
+    {   
         if((i / w) % 2 == 0)
         {
-            cnt[i % w]++;
-            
-            if(i == num - 1)
-            {
-                y = i / w;
-                x = i % w;
-            }
+            v[i / w][i % w] = 1;
         }
         else
         {
-            cnt[(w - 1) - i % w]++;
-            
-            if(i == num - 1)
-            {
-                y = i / w;
-                x = (w - 1) - i % w;
-            }
+            v[i / w][w - 1 - i % w] = 1;
         }
-        
-        i++;
     }
     
-    for(int i = 0; i < cnt.size(); i++)
+    for(int i = num / w ; i < height; i++)
     {
-        cout << cnt[i] << " ";
+        if(v[i][num % w] == 0)
+            break;
+        
+        ++answer;
     }
     
-    answer = cnt[x] - y;
+    if(num % w == 0)
+        ++answer;
     
-
     return answer;
 }
